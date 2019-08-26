@@ -1,0 +1,113 @@
+.container {
+  background-color: red; }
+
+img {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle; }
+
+svg {
+  width: 1.25em;
+  height: 1.25em;
+  color: currentColor;
+  display: inline-block;
+  vertical-align: middle; }
+
+a {
+  text-decoration: none; }
+
+p {
+  margin-bottom: 1.5em; }
+
+.container {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1.5em; }
+
+.card {
+  perspective: 1000px; }
+  .card:hover .card__inner, .card:active .card__inner, .card:focus .card__inner {
+    transform: rotateY(180deg); }
+
+.card,
+.card__inner {
+  max-width: 300px;
+  min-height: 380px;
+  position: relative; }
+
+.card__inner {
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%; }
+
+.card__media {
+  margin: -1.5em -1.5em 1.5em; }
+
+.card__front,
+.card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 10px;
+  overflow: hidden; }
+  .card__front p,
+  .card__back p {
+    font-size: 0.825em;
+    color: #888; }
+
+.card__back {
+  transform: rotateY(180deg); }
+
+.card__content {
+  position: relative;
+  height: 100%; }
+
+.card__title {
+  font-weight: 700;
+  margin-bottom: 1em;
+  text-transform: uppercase; }
+
+.card__cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.75em;
+  background-image: linear-gradient(-90deg, #ffb714, #ffe579);
+  border-radius: 5px;
+  text-align: center;
+  color: currentColor;
+  font-weight: 700; }
+  .card__cta:hover .card__cta__label, .card__cta:active .card__cta__label, .card__cta:focus .card__cta__label {
+    transform: translateX(0); }
+  .card__cta:hover .card__cta__icon, .card__cta:active .card__cta__icon, .card__cta:focus .card__cta__icon {
+    transform: translateX(0px);
+    opacity: 1; }
+
+.card__cta__label {
+  transform: translateX(8px); }
+
+.card__cta__icon {
+  transform: translateX(-8px);
+  opacity: 0; }
+
+.card__cta__label,
+.card__cta__icon {
+  transition: all 0.3s ease-out; }
+
+.card__cta--bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.card__front,
+.card__back,
+.card__content,
+.card__cta,
+.card__cta__label {
+  backface-visibility: hidden; }
